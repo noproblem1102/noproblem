@@ -1,0 +1,511 @@
+﻿====================================================================================================
+                                   TỔNG HỢP 30 CÂU HỎI VÀ ĐÁP ÁN
+                     Logic học – Tổ hợp – Thuật toán liệt kê – Bài toán tối ưu
+====================================================================================================
+
+                                         BẢNG ĐÁP ÁN NHANH
+----------------------------------------------------------------------------------------------------
+Câu :   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10  |   11  |   12  |   13  |   14  |   15
+Đáp:   C   |   B   |   D   |   A   |   C   |   C   |   A   |   A   |   C   |   D   |   A   |   B   |   A   |   D   |   B
+----------------------------------------------------------------------------------------------------
+Câu :   16   |   17   |   18   |   19   |   20   |   21   |   22   |   23   |   24   |   25   |   26   |   27   |   28   |   29   |   30
+Đáp:   C    |   D    |   A    |   C    |   A    |   D    |   B    | A và C |   D    |   C    |   A    |   A    |   B    |   C    |   A
+----------------------------------------------------------------------------------------------------
+
+Chi tiết từng câu ở các trang sau.
+
+====================================================================================================
+CÂU 1
+====================================================================================================
+Cho mệnh đề x = [(p → q) ∧ (q → r)] → (q ∨ ¬q). Chọn phương án đúng nhất trong các phương án dưới
+đây:
+A. Nếu p = 0, q = 1 và r = 1 thì x = 1.
+B. Nếu p = 1, q = 0 và r = 0 thì x = 1.
+C. Mệnh đề x là một hằng đúng.
+D. Mệnh đề x là một hằng sai.
+E. Các phương án khác đều sai.
+Đáp án đúng: C. Mệnh đề x là một hằng đúng.
+Giải thích ngắn: Vì q ∨ ¬q luôn đúng nên mệnh đề kéo theo luôn có giá trị đúng.
+
+====================================================================================================
+CÂU 2
+====================================================================================================
+Mệnh đề nào trong các mệnh đề dưới đây là mệnh đề hằng đúng?
+1. (p ∧ q) ∧ T
+2. (p ∧ q) ∨ T
+3. (p ∨ q) ∧ T
+4. (p ∨ q) ∨ T
+A. 1, 3
+B. 2, 4
+C. 1, 2
+D. 3, 4
+E. Các phương án khác đều sai.
+Đáp án đúng: B. 2, 4.
+Giải thích ngắn: Mọi mệnh đề tuyển với T đều bằng T; các mệnh đề 1 và 3 lần lượt rút gọn thành p ∧ q và p ∨ q.
+
+====================================================================================================
+CÂU 3
+====================================================================================================
+Tương đương logic nào dưới đây là chính xác?
+1. p → q ≡ ¬q → ¬p
+2. p ∧ T ∧ F ≡ F
+3. ¬p ∨ F ∨ T ≡ T
+4. p → q ≡ q → p
+A. 1
+B. 1, 2
+C. 1, 3
+D. 1, 2, 3
+E. Các phương án khác đều sai.
+Đáp án đúng: D. 1, 2, 3.
+Giải thích ngắn: Mệnh đề 1 là phản đảo; mệnh đề 2 chứa phép hội với F; mệnh đề 3 chứa phép tuyển với T.
+
+====================================================================================================
+CÂU 4
+====================================================================================================
+Cho tập S = {1, 2, 3, 4, 5, 6, 7, 8}. Hai tập con X của S được biểu diễn dưới dạng xâu nhị phân X =
+10101010 và Y = 01010100 có độ dài 8. Chọn phương án đúng nhất:
+A. X ∪ Y = {1, 2, 3, 4, 5, 6, 7}.
+B. X ∪ Y = {1, 2, 3, 4, 6, 8}.
+C. X ∪ Y = {1, 2, 3, 4, 7, 8}.
+D. X ∪ Y = {2, 3, 4, 6, 7, 8}.
+E. Các phương án khác đều sai.
+Đáp án đúng: A. X ∪ Y = {1, 2, 3, 4, 5, 6, 7}.
+Giải thích ngắn: X = {1,3,5,7}, Y = {2,4,6}; hợp của hai tập là {1,2,3,4,5,6,7}.
+
+====================================================================================================
+CÂU 5
+====================================================================================================
+Cho A, B, C là ba tập hợp. Đặt X = (B − A) ∪ (C − A) và Y = (B ∪ C) − A. Chọn phương án đúng nhất:
+A. X ⊂ Y.
+B. Y ⊂ X.
+C. X = Y.
+D. X ≠ Y.
+E. Các phương án khác đều sai.
+Đáp án đúng: C. X = Y.
+Giải thích ngắn: Theo tính phân phối của hiệu tập hợp: (B − A) ∪ (C − A) = (B ∪ C) − A.
+
+====================================================================================================
+CÂU 6
+====================================================================================================
+Mệnh đề [(p ∨ T) ∧ (p ∨ F) ∧ (¬p ∨ T) ∧ (¬p ∨ F)] tương đương với mệnh đề nào dưới đây?
+A. p
+B. T
+C. F
+D. ¬p
+E. Không có đáp án nào đúng trong các đáp án còn lại.
+Đáp án đúng: C. F.
+Giải thích ngắn: Biểu thức rút gọn thành T ∧ p ∧ T ∧ ¬p = p ∧ ¬p = F.
+
+====================================================================================================
+CÂU 7
+====================================================================================================
+Có bao nhiêu số tự nhiên trong khoảng 1000 đến 5000, chia hết cho 6 hoặc 9?
+A. 889
+B. 1037
+C. 1110
+D. 1111
+E. Các phương án khác đều sai.
+Đáp án đúng: A. 889.
+Giải thích ngắn: Dùng nguyên lý bù trừ: N(6) + N(9) − N(18) = 667 + 444 − 222 = 889.
+
+====================================================================================================
+CÂU 8
+====================================================================================================
+Phương trình x₁ + x₂ + x₃ = 13 có bao nhiêu nghiệm không âm thỏa mãn điều kiện 3 ≥ x₁ ≥ 1?
+A. 36
+B. 25
+C. 235
+D. 389
+E. Các phương án khác đều sai.
+Đáp án đúng: A. 36.
+Giải thích ngắn: Với x₁ = 1, 2, 3, số nghiệm của x₂ + x₃ lần lượt là 13, 12, 11; tổng bằng 36.
+
+====================================================================================================
+CÂU 9
+====================================================================================================
+Có bao nhiêu xâu nhị phân 7 bit không chứa 3 số 0 liên tiếp?
+A. 44
+B. 68
+C. 81
+D. 90
+E. Các phương án khác đều sai.
+Đáp án đúng: C. 81.
+Giải thích ngắn: Dãy đếm thỏa mãn aₙ = aₙ₋₁ + aₙ₋₂ + aₙ₋₃ với a₀=1, a₁=2, a₂=4; suy ra a₇=81.
+
+====================================================================================================
+CÂU 10
+====================================================================================================
+Giả sử cần chọn 1 hộp bánh hoặc 1 hộp trà làm quà biếu người thân. Cửa hàng có 35 hộp bánh và 25 hộp
+trà khác nhau. Có bao nhiêu cách chọn quà?
+A. 10
+B. 25
+C. 35
+D. 60
+E. Các phương án khác đều sai.
+Đáp án đúng: D. 60.
+Giải thích ngắn: Theo quy tắc cộng: 35 + 25 = 60 cách.
+
+====================================================================================================
+CÂU 11
+====================================================================================================
+Có bao nhiêu ánh xạ từ một tập A có m phần tử vào tập B có n phần tử?
+A. nᵐ
+B. mⁿ
+C. n·m
+D. n + m
+E. Các phương án khác đều sai.
+Đáp án đúng: A. nᵐ.
+Giải thích ngắn: Mỗi phần tử của A có n lựa chọn ảnh trong B, độc lập cho m phần tử.
+
+====================================================================================================
+CÂU 12
+====================================================================================================
+Có bao nhiêu xâu nhị phân độ dài 8 bit bắt đầu bởi 00 hoặc kết thúc bởi 11?
+A. 128
+B. 112
+C. 80
+D. 64
+E. Các phương án khác đều sai.
+Đáp án đúng: B. 112.
+Giải thích ngắn: Có 64 xâu bắt đầu 00, 64 xâu kết thúc 11 và 16 xâu thuộc giao; tổng 64 + 64 − 16 = 112.
+
+====================================================================================================
+CÂU 13
+====================================================================================================
+Xét thuật toán liệt kê hoán vị sử dụng phương pháp sinh theo thứ tự từ điển. Nội dung cần thay thế
+tại vị trí (?) là:
+
+    Input: n;
+    Output: Tất cả các hoán vị a[1], ..., a[n];
+    (1) Khởi tạo: a[i] = i, 1 ≤ i ≤ n;
+    (2) Thực hiện n! lần lặp {
+      (2.1) In ra a[];
+      (2.2) Tìm i lớn nhất thỏa mãn điều kiện (?);
+      (2.3) Nếu không tìm được i thì kết thúc;
+      (2.4) Tìm k lớn nhất sao a[k] > a[i] rồi đổi chỗ a[i] và a[k];
+      (2.5) Lật ngược đoạn từ vị trí i+1 đến vị trí n;
+    }
+
+A. a[i] < a[i+1].
+B. a[i] > a[i+1].
+C. a[i] = a[i+1].
+D. a[i] = a[1].
+E. Các phương án khác đều sai.
+Đáp án đúng: A. a[i] < a[i+1].
+Giải thích ngắn: Trong thuật toán sinh hoán vị kế tiếp, cần tìm chỉ số i lớn nhất sao cho a[i] < a[i+1].
+
+====================================================================================================
+CÂU 14
+====================================================================================================
+Cho tổ hợp (1, 2, 5, 7) của tập hợp gồm 7 số nguyên dương đầu tiên. Sử dụng thuật toán sinh tổ hợp
+kế tiếp theo thứ tự từ điển, hai tổ hợp liền kế tiếp theo của tổ hợp đã cho là:
+A. (1, 2, 6, 7) và (1, 2, 5, 6).
+B. (1, 3, 4, 5) và (1, 3, 4, 6).
+C. (1, 3, 4, 5) và (1, 2, 6, 7).
+D. (1, 2, 6, 7) và (1, 3, 4, 5).
+E. Các phương án khác đều sai.
+Đáp án đúng: D. (1, 2, 6, 7) và (1, 3, 4, 5).
+Giải thích ngắn: Tổ hợp kế tiếp của (1,2,5,7) là (1,2,6,7); sau đó chuyển sang (1,3,4,5).
+
+====================================================================================================
+CÂU 15
+====================================================================================================
+Sử dụng thuật toán quay lui liệt kê các tổ hợp với n = 5 và k = 3 theo thứ tự từ điển. Trong các tổ
+hợp đã liệt kê, tổ hợp (2, 3, 4) có số thứ tự là:
+A. 6
+B. 7
+C. 8
+D. 9
+E. Các phương án khác đều sai.
+Đáp án đúng: B. 7.
+Giải thích ngắn: Thứ tự là 123, 124, 125, 134, 135, 145, 234, ... nên (2,3,4) đứng thứ 7.
+
+====================================================================================================
+CÂU 16
+====================================================================================================
+Xét thuật toán liệt kê xâu nhị phân sử dụng phương pháp sinh theo thứ tự từ điển. Nội dung cần thay
+thế tại vị trí (?) và (??) tương ứng là:
+
+    Input: n;
+    Output: Tất cả các xâu nhị phân x[1], ..., x[n];
+    (1) Khởi tạo: x[i] = 0, 1 ≤ i ≤ n;
+    (2) Thực hiện 2ⁿ lần lặp {
+      (2.1) In ra x[];
+      (2.2) Tìm i lớn nhất thỏa mãn điều kiện (?);
+      (2.3) Nếu không tìm được i thì kết thúc;
+      (2.4) Thực hiện x[i]++;
+      (2.5) Thay thế x[j] = ??, với i+1 ≤ j ≤ n;
+    }
+
+A. x[i] = 1 và x[j] = 1.
+B. x[i] = 1 và x[j] = 0.
+C. x[i] = 0 và x[j] = 0.
+D. x[i] = 0 và x[j] = 1.
+E. Các phương án khác đều sai.
+Đáp án đúng: C. x[i] = 0 và x[j] = 0.
+Giải thích ngắn: Tìm bit 0 ngoài cùng bên phải, tăng nó thành 1 rồi đặt toàn bộ phần đuôi về 0.
+
+====================================================================================================
+CÂU 17
+====================================================================================================
+Xét hàm trên C/C++ cài đặt thuật toán sử dụng phương pháp quay lui liệt kê tổ hợp theo thứ tự từ
+điển. Nội dung cần thay thế tại vị trí (?) và (??) tương ứng là:
+
+    int a[100], n, k;
+
+    void ThDq(int m) {
+      int i;
+      if (m > k) {
+        for (i = 1; i <= k; i++) cout << a[i] << " ";
+        cout << endl; return;
+      }
+      for (i = ?; ??; i++) {
+        a[m] = i;
+        ThDq(m+1);
+      }
+    }
+
+    void LkDqTh(int a[], int n, int k) {
+      ThDq(1);
+    }
+
+A. i = a[m−1] + 1 và i < n−k+m.
+B. i = a[m−1] và i ≤ n−k+m.
+C. i = a[m−1] và i < n−k+m.
+D. i = a[m−1] + 1 và i ≤ n−k+m.
+Đáp án đúng: D. i = a[m−1] + 1 và i ≤ n−k+m.
+Giải thích ngắn: Cận dưới bảo đảm các phần tử tăng dần; cận trên bảo đảm còn đủ chỗ cho các phần tử tiếp theo.
+
+====================================================================================================
+CÂU 18
+====================================================================================================
+Cho hoán vị (4, 1, 2, 5, 3, 6). Sử dụng thuật toán sinh hoán vị kế tiếp theo thứ tự từ điển, hoán vị
+liền kế tiếp của hoán vị đã cho là:
+A. (4, 1, 2, 5, 6, 3).
+B. (4, 1, 2, 3, 6, 5).
+C. (4, 1, 3, 5, 2, 6).
+D. (4, 1, 3, 5, 2, 6).
+E. Các phương án khác đều sai.
+Đáp án đúng: A. (4, 1, 2, 5, 6, 3).
+Giải thích ngắn: Từ phải sang trái, cặp tăng đầu tiên là 3 < 6; đổi 3 và 6 rồi đảo phần đuôi.
+
+====================================================================================================
+CÂU 19
+====================================================================================================
+Xét thuật toán duyệt toàn thể giải bài toán cái túi với số đồ vật n, trọng lượng túi b, hàm mục tiêu
+f(X) = c₁x₁ + ... + cₙxₙ và hàm tổng trọng lượng g(X) = a₁x₁ + ... + aₙxₙ. Nội dung cần thay thế tại
+vị trí (?) và (??) là:
+
+    Bước 1 (Khởi tạo):
+    Xopt = ∅;
+    Fopt = −∞;
+
+    Bước 2 (Lặp):
+    Duyệt tất cả các xâu nhị phân X = (x₁, ..., xₙ) độ dài n theo thứ tự từ điển {
+      Tính g(X) = a₁x₁ + ... + aₙxₙ
+      Nếu (?) {
+        Tính f(X) = c₁x₁ + ... + cₙxₙ
+        Nếu (??) {
+          Fopt = f(X);
+          Xopt = X;
+        }
+      }
+    }
+
+    Bước 3: Return(Fopt, Xopt);
+
+A. g(X) ≤ b và f(X) < Fopt.
+B. g(X) < b và f(X) ≤ Fopt.
+C. g(X) ≤ b và f(X) > Fopt.
+D. g(X) < b và f(X) ≥ Fopt.
+E. Các phương án khác đều sai.
+Đáp án đúng: C. g(X) ≤ b và f(X) > Fopt.
+Giải thích ngắn: Một phương án chỉ hợp lệ khi không vượt quá sức chứa; với bài toán cực đại chỉ cập nhật khi giá trị mới lớn hơn Fopt.
+
+====================================================================================================
+CÂU 20
+====================================================================================================
+Xét bài toán cái túi sau đây:
+7x₁ + 8x₂ + 5x₃ → Max
+9x₁ + 6x₂ + 7x₃ ≤ 15
+xᵢ ∈ {0,1}, i = 1,2,3.
+Chọn phương án đúng nhất:
+A. Số đồ vật n = 3 và trọng lượng túi b = 15.
+B. Số đồ vật n = 3 và trọng lượng túi b = 9.
+C. Số đồ vật n = 4 và trọng lượng túi b = 15.
+D. Số đồ vật n = 4 và trọng lượng túi b = 9.
+Đáp án đúng: A. Số đồ vật n = 3 và trọng lượng túi b = 15.
+Giải thích ngắn: Có ba biến quyết định tương ứng ba đồ vật; vế phải của ràng buộc trọng lượng là 15.
+
+====================================================================================================
+CÂU 21
+====================================================================================================
+Cho bài toán cái túi dạng 0/1:
+f(X) = 5x₁ + x₂ + 8x₃ + x₄ → max
+4x₁ + 2x₂ + 7x₃ + x₄ ≤ 10.
+Duyệt toàn bộ các phương án theo thứ tự từ điển như bảng dưới đây. Hãy tìm dòng sai đầu tiên:
+
+    Dòng  x₁x₂x₃x₄   Thuộc tập phương án D   f(X)   Fopt
+    1      0000         Có                      0      0
+    2      0001         Có                      1      1
+    3      0010         Có                      8      8
+    4      0011         Có                      9      9
+    5      0100         Có                      1      9
+    6      0101         Có                      2      9
+    7      0110         Có                      9      9
+    8      0111         Không                   --     --
+    9      1000         Có                      5      9
+    10     1001         Có                      6      9
+    11     1010         Không                   --     --
+    12     1011         Không                   --     --
+    13     1100         Có                      6      9
+    14     1101         Có                      7      9
+    15     1110         Không                   --     --
+    16     1111         Không                   --     --
+
+A. 4
+B. 16
+C. 12
+D. 8
+Đáp án đúng: D. Dòng 8.
+Giải thích ngắn: Phương án 0111 có trọng lượng 2 + 7 + 1 = 10 nên vẫn thuộc tập phương án và có f(X)=10; bảng ghi “Không” là sai đầu tiên.
+
+====================================================================================================
+CÂU 22
+====================================================================================================
+Xét bài toán cái túi:
+7x₁ + 8x₂ + 5x₃ → Max
+9x₁ + 6x₂ + 7x₃ ≤ 15
+xᵢ ∈ {0,1}, i = 1,2,3.
+Sắp xếp lại các đồ vật để có thể áp dụng thuật toán nhánh cận. Hàm mục tiêu và hàm trọng lượng mới
+của bài toán là:
+A. a₁=9, c₁=7; a₂=6, c₂=8; a₃=7, c₃=5.
+B. a₁=6, c₁=8; a₂=9, c₂=7; a₃=7, c₃=5.
+C. a₁=6, c₁=7; a₂=9, c₂=7; a₃=7, c₃=5.
+D. a₁=6, c₁=8; a₂=9, c₂=7; a₃=6, c₃=5.
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: B. a₁=6, c₁=8; a₂=9, c₂=7; a₃=7, c₃=5.
+Giải thích ngắn: Sắp giảm dần theo tỷ số cᵢ/aᵢ: 8/6 > 7/9 > 5/7.
+
+====================================================================================================
+CÂU 23
+====================================================================================================
+Xét bài toán người du lịch với ma trận chi phí C:
+0  5  6  7
+6  0  9  8
+3  4  0  2
+9  8  2  0
+Một phương án X và giá trị hàm mục tiêu tương ứng f(X) là:
+A. X = (1, 3, 4, 2) và f(X) = 22.
+B. X = (1, 3, 2, 4) và f(X) = 26.
+C. X = (1, 2, 4, 3) và f(X) = 18.
+D. X = (1, 3, 2, 4) và f(X) = 28.
+E. Các phương án khác đều sai.
+Đáp án đúng: A và C đều đúng theo ma trận đã cho.
+Giải thích ngắn: Chu trình (1,3,4,2,1) có chi phí 6+2+8+6=22; chu trình (1,2,4,3,1) có chi phí 5+8+2+3=18.
+Lưu ý: Câu này có hai lựa chọn đúng, dù đề thường yêu cầu một đáp án. Nếu hệ thống chỉ cho chọn một,
+phương án C là chu trình có chi phí nhỏ hơn.
+
+====================================================================================================
+CÂU 24
+====================================================================================================
+Xét bài toán người du lịch với ma trận chi phí C:
+0  5  7
+6  0  9
+1  4  0
+Ký hiệu Cmin là chi phí nhỏ nhất khi di chuyển từ thành phố i đến thành phố j (i ≠ j). Giá trị Cmin
+là:
+A. Cmin = 5.
+B. Cmin = 6.
+C. Cmin = 0.
+D. Cmin = 1.
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: D. Cmin = 1.
+Giải thích ngắn: Chỉ xét các phần tử ngoài đường chéo chính; giá trị nhỏ nhất là 1.
+
+====================================================================================================
+CÂU 25
+====================================================================================================
+Xếp n đối tượng vào k hộp. Để chắc chắn tồn tại hộp chứa nhiều hơn 1 đối tượng thì giá trị nhỏ nhất
+của n là:
+A. n = 2k.
+B. n = k − 1.
+C. n = k + 1.
+D. Không thể xảy ra trường hợp của đề bài với mọi giá trị của n và k.
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: C. n = k + 1.
+Giải thích ngắn: Theo nguyên lý Dirichlet, k+1 đối tượng phân vào k hộp thì có ít nhất một hộp chứa từ 2 đối tượng.
+
+====================================================================================================
+CÂU 26
+====================================================================================================
+Một hộp đựng bi chứa các viên bi có kích thước thuộc một trong 15 loại và màu sắc thuộc một trong 3
+màu khác nhau. Giả sử số lượng mỗi loại bi là không hạn chế. Cần lấy ra ít nhất bao nhiêu viên bi để
+chắc chắn có ít nhất 11 viên bi giống nhau cả kích thước lẫn màu sắc?
+A. 451
+B. 452
+C. 661
+D. 449
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: A. 451.
+Giải thích ngắn: Có 15×3=45 loại. Có thể lấy 10 viên mỗi loại mà chưa đủ 11 viên giống nhau: 45×10=450; lấy thêm một viên là đủ.
+
+====================================================================================================
+CÂU 27
+====================================================================================================
+Cần ít nhất bao nhiêu sinh viên làm bài thi để có ít nhất 2 sinh viên có cùng điểm, biết rằng điểm
+thi là nguyên và trong đoạn 0 đến 100?
+A. 102
+B. 103
+C. 104
+D. 105
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: A. 102.
+Giải thích ngắn: Có 101 mức điểm từ 0 đến 100. Với 102 sinh viên, nguyên lý Dirichlet bảo đảm có hai người cùng điểm.
+
+====================================================================================================
+CÂU 28
+====================================================================================================
+Có n sinh viên tham gia câu lạc bộ lập trình. Mỗi sinh viên đều đã biết một trong các ngôn ngữ lập
+trình C, C++, Java và Python. Giả sử chắc chắn có 10 sinh viên trong đó có cùng giới tính và biết
+cùng một ngôn ngữ lập trình. Chọn phương án đúng nhất:
+A. Giá trị nhỏ nhất của n = 72.
+B. Giá trị nhỏ nhất của n = 73.
+C. Giá trị nhỏ nhất của n = 74.
+D. Giá trị nhỏ nhất của n = 75.
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: B. Giá trị nhỏ nhất của n = 73.
+Giải thích ngắn: Có 2 giới tính × 4 ngôn ngữ = 8 nhóm. Tối đa 9 người mỗi nhóm là 72; người thứ 73 tạo một nhóm có ít nhất 10 người.
+
+====================================================================================================
+CÂU 29
+====================================================================================================
+Một hộp đựng n viên bi có kích thước thuộc một trong ba loại to, vừa, nhỏ và màu sắc thuộc một trong
+bốn màu xanh, đỏ, tím, vàng. Giả sử trong hộp chắc chắn có 10 viên bi giống nhau cả kích thước lẫn
+màu sắc. Chọn phương án đúng nhất:
+A. Giá trị nhỏ nhất của n = 107.
+B. Giá trị nhỏ nhất của n = 108.
+C. Giá trị nhỏ nhất của n = 109.
+D. Giá trị nhỏ nhất của n = 110.
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: C. Giá trị nhỏ nhất của n = 109.
+Giải thích ngắn: Có 3×4=12 loại. Có thể có 9 viên mỗi loại, tổng 108 viên, mà chưa có 10 viên giống nhau; viên thứ 109 bảo đảm điều kiện.
+
+====================================================================================================
+CÂU 30
+====================================================================================================
+Trong buổi học, sinh viên cần làm đề thi trắc nghiệm nhanh về AI, mỗi đề gồm 10 câu hỏi. Mỗi câu hỏi
+có 4 phương án trả lời và chỉ được lựa chọn tối đa 1 phương án. Mỗi câu trả lời đúng được 1 điểm;
+câu trả lời sai hoặc không trả lời thì không được điểm. Giả sử có 22 sinh viên tham gia thi và có ít
+nhất x sinh viên có điểm thi giống nhau. Chọn phương án đúng nhất:
+A. x = 2
+B. x = 3
+C. x = 4
+D. x = 5
+E. Các lựa chọn khác đều sai.
+Đáp án đúng: A. x = 2.
+Giải thích ngắn: Điểm có thể là 0,1,...,10, tổng cộng 11 mức. Với 22 sinh viên, ít nhất một mức điểm có ⌈22/11⌉ = 2 sinh viên.
+
+====================================================================================================
+                                              — HẾT —
+====================================================================================================

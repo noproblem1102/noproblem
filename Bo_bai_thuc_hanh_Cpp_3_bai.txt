@@ -1,0 +1,214 @@
+BỘ BÀI THỰC HÀNH C++ - CÂU HỎI VÀ ĐÁP ÁN
+============================================
+
+BÀI 1. ĐẾM XÂU NHỊ PHÂN
+-----------------------
+
+Đề bài:
+Cho trước hai số nguyên dương n và s.
+
+Yêu cầu:
+Tìm số lượng t các xâu nhị phân độ dài n có tổng các chữ số bằng s.
+
+Dữ liệu:
+Một dòng chứa hai số nguyên dương n, s; n không vượt quá 50 và s <= n.
+
+Kết quả:
+In ra số lượng xâu nhị phân tìm được.
+
+Ví dụ:
+Input:
+3 1
+
+Output:
+3
+
+Giải thích:
+Có 3 xâu nhị phân độ dài 3 có đúng 1 chữ số 1: 001, 010, 100.
+
+Đáp án C++:
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, s;
+    cin >> n >> s;
+
+    vector<unsigned long long> dp(s + 1, 0);
+    dp[0] = 1;
+
+    for (int i = 1; i <= n; ++i) {
+        for (int j = min(i, s); j >= 1; --j) {
+            dp[j] += dp[j - 1];
+        }
+    }
+
+    cout << dp[s];
+    return 0;
+}
+
+
+BÀI 2. TẠO CÁC HÌNH VUÔNG CÓ CẠNH KHÁC NHAU
+--------------------------------------------
+
+Đề bài:
+Cho trước n ô vuông đơn vị có cạnh bằng 1.
+
+Yêu cầu:
+Tìm số lượng lớn nhất các hình vuông có độ dài cạnh là các số nguyên khác nhau
+có thể tạo được từ n ô vuông đã cho.
+
+Dữ liệu:
+Một dòng chứa số nguyên dương n, không vượt quá 2^18.
+
+Kết quả:
+In ra số lượng hình vuông lớn nhất có thể tạo được.
+
+Ví dụ:
+Input:
+10
+
+Output:
+2
+
+Giải thích:
+Có thể tạo hai hình vuông cạnh 1 và cạnh 2.
+1^2 + 2^2 = 5 <= 10, nhưng 1^2 + 2^2 + 3^2 = 14 > 10.
+
+Đáp án C++:
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    long long n;
+    cin >> n;
+
+    long long left = 0;
+    long long right = 1000000;
+    long long answer = 0;
+
+    while (left <= right) {
+        long long mid = (left + right) / 2;
+
+        __int128 required =
+            (__int128)mid * (mid + 1) * (2 * mid + 1) / 6;
+
+        if (required <= n) {
+            answer = mid;
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    cout << answer;
+    return 0;
+}
+
+
+BÀI 3. BÀI TOÁN CÁI TÚI 0/1 BẰNG DUYỆT TOÀN BỘ
+-----------------------------------------------
+
+Đề bài:
+Một nhà thám hiểm có một cái túi chứa được các đồ vật với tổng trọng lượng
+không quá b. Có n đồ vật, đồ vật thứ i có trọng lượng ai và giá trị ci.
+
+Yêu cầu:
+Sử dụng phương pháp duyệt toàn thể để chọn các đồ vật sao cho tổng trọng lượng
+không vượt quá b và tổng giá trị là lớn nhất.
+
+Dữ liệu:
+- Dòng đầu chứa n và b, với n <= 20, b <= 10^7.
+- n dòng tiếp theo, mỗi dòng chứa ai và ci, mỗi số <= 10^6.
+
+Kết quả:
+- Dòng đầu ghi tổng giá trị lớn nhất.
+- Dòng sau ghi n số xi, với xi = 1 nếu chọn đồ vật i, xi = 0 nếu không chọn.
+
+Ví dụ:
+Input:
+3 8
+5 8
+7 12
+3 7
+
+Output:
+15
+1 0 1
+
+Giải thích:
+Chọn đồ vật thứ 1 và thứ 3.
+Tổng trọng lượng: 5 + 3 = 8.
+Tổng giá trị: 8 + 7 = 15.
+
+Đáp án C++:
+
+#include <iostream>
+#include <vector>
+#include <cstdint>
+
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    long long b;
+    cin >> n >> b;
+
+    vector<long long> weight(n);
+    vector<long long> value(n);
+
+    for (int i = 0; i < n; ++i) {
+        cin >> weight[i] >> value[i];
+    }
+
+    long long bestValue = 0;
+    uint64_t bestMask = 0;
+    const uint64_t totalMasks = 1ULL << n;
+
+    for (uint64_t mask = 0; mask < totalMasks; ++mask) {
+        long long totalWeight = 0;
+        long long totalValue = 0;
+
+        for (int i = 0; i < n; ++i) {
+            if ((mask >> i) & 1ULL) {
+                totalWeight += weight[i];
+
+                if (totalWeight > b) {
+                    break;
+                }
+
+                totalValue += value[i];
+            }
+        }
+
+        if (totalWeight <= b && totalValue > bestValue) {
+            bestValue = totalValue;
+            bestMask = mask;
+        }
+    }
+
+    cout << bestValue << '\n';
+
+    for (int i = 0; i < n; ++i) {
+        cout << ((bestMask >> i) & 1ULL);
+        if (i + 1 < n) {
+            cout << ' ';
+        }
+    }
+
+    return 0;
+}
